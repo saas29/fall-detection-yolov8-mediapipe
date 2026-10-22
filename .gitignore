@@ -1,0 +1,12 @@
+﻿venv/
+.venv/
+__pycache__/
+*.pyc
+*.pt
+videos/**
+!videos/.gitkeep
+alerts/
+results/*_frames.csv
+*.part
+models/
+kernel.errors.txt

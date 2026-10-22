@@ -1,0 +1,52 @@
+{
+    // Terminal > Run Task... (or Ctrl+Shift+P -> "Tasks: Run Task")
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}"
+    },
+    "tasks": [
+        {
+            "label": "Setup: create .venv + install everything",
+            "type": "shell",
+            "command": "powershell -ExecutionPolicy Bypass -File scripts/setup_windows.ps1",
+            "problemMatcher": []
+        },
+        {
+            "label": "Data: download URFD",
+            "type": "shell",
+            "command": ".venv/Scripts/python.exe tools/download_urfd.py",
+            "problemMatcher": []
+        },
+        {
+            "label": "Data: make URFD labels",
+            "type": "shell",
+            "command": ".venv/Scripts/python.exe tools/make_labels.py urfd --root videos/urfd --out data/urfd",
+            "problemMatcher": []
+        },
+        {
+            "label": "Data: make Le2i labels",
+            "type": "shell",
+            "command": ".venv/Scripts/python.exe tools/make_labels.py le2i --root videos/le2i --out data/le2i",
+            "problemMatcher": []
+        },
+        {
+            "label": "Data: make custom/live labels",
+            "type": "shell",
+            "command": ".venv/Scripts/python.exe tools/make_labels.py custom --root videos/custom --out data/custom",
+            "problemMatcher": []
+        },
+        {
+            "label": "Experiments: run all (URFD angle + aspect + benchmark + report)",
+            "type": "shell",
+            "command": "powershell -ExecutionPolicy Bypass -File scripts/run_experiments.ps1",
+            "problemMatcher": []
+        },
+        {
+            "label": "Tests: unit tests",
+            "type": "shell",
+            "command": ".venv/Scripts/python.exe -m unittest discover -v tests",
+            "group": { "kind": "test", "isDefault": true },
+            "problemMatcher": []
+        }
+    ]
+}

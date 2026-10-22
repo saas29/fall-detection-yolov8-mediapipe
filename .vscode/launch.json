@@ -1,0 +1,151 @@
+{
+    // Run and Debug panel (Ctrl+Shift+D): pick a configuration, press F5.
+    // Press q in the video window to stop a demo.
+    "version": "0.2.0",
+    "inputs": [
+        {
+            "id": "videoPath",
+            "type": "promptString",
+            "description": "Video file or image folder (relative to project)",
+            "default": "videos/urfd/fall-01-cam0.mp4"
+        },
+        {
+            "id": "method",
+            "type": "pickString",
+            "description": "Fall rule",
+            "options": ["angle", "aspect"],
+            "default": "angle"
+        }
+    ],
+    "configurations": [
+        {
+            "name": "1. Demo: webcam (torso angle)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["demo", "--source", "0", "--beep"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "2. Demo: webcam (aspect ratio baseline)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["demo", "--source", "0", "--method", "aspect"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "3. Demo: video file (asks path + method)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["demo", "--source", "${input:videoPath}", "--method", "${input:method}"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            // URFD mp4s are depth|RGB side by side -> keep only the RGB half
+            "name": "3b. Demo: URFD clip (asks path + method)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["demo", "--source", "${input:videoPath}", "--method", "${input:method}",
+                     "--crop", "320,0,320,240"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "4. Demo: video file -> save annotated out.mp4",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["demo", "--source", "${input:videoPath}", "--save", "results/out.mp4"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "5. Eval: URFD quick test (5 clips, shows video)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["eval", "--dataset", "URFD", "--name", "URFD_quick",
+                     "--videos", "videos/urfd", "--crop", "320,0,320,240", "--labels", "data/urfd_labels.csv",
+                     "--frame-labels", "data/urfd_frame_labels.csv",
+                     "--limit", "5", "--show"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "6. Eval: URFD torso angle (Table III)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["eval", "--dataset", "URFD", "--videos", "videos/urfd", "--crop", "320,0,320,240",
+                     "--labels", "data/urfd_labels.csv",
+                     "--frame-labels", "data/urfd_frame_labels.csv"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "7. Eval: URFD aspect ratio (Table IV baseline)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["eval", "--dataset", "URFD", "--method", "aspect", "--videos", "videos/urfd", "--crop", "320,0,320,240",
+                     "--labels", "data/urfd_labels.csv",
+                     "--frame-labels", "data/urfd_frame_labels.csv"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "8. Eval: Le2i torso angle",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["eval", "--dataset", "Le2i", "--videos", "videos/le2i",
+                     "--labels", "data/le2i_labels.csv",
+                     "--frame-labels", "data/le2i_frame_labels.csv"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "9. Eval: Live / custom clips (asks method)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["eval", "--dataset", "Live", "--method", "${input:method}",
+                     "--videos", "videos/custom", "--labels", "data/custom_labels.csv"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "10. Benchmark: this laptop (Table VII)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["benchmark", "--source", "videos/urfd/fall-01-cam0.mp4", "--crop", "320,0,320,240", "--name", "benchmark_laptop_angle"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "11. Report: build results/report.md",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/fall_detection.py",
+            "args": ["report"],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug: current file",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal"
+        }
+    ]
+}

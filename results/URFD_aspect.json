@@ -1,0 +1,760 @@
+{
+  "name": "URFD_aspect",
+  "dataset": "URFD",
+  "method": "aspect",
+  "created": "2026-10-20T17:54:08",
+  "config": {
+    "method": "aspect",
+    "angle_thresh": 45.0,
+    "ar_thresh": 1.0,
+    "persist_frames": 10,
+    "latch_frames": 30,
+    "weights": "models/yolov8n.pt",
+    "conf": 0.3,
+    "imgsz": 640,
+    "pose_complexity": 1,
+    "min_visibility": 0.4,
+    "crop_pad": 0.1,
+    "rotate_fallback": true,
+    "rotate_min_ar": 0.7,
+    "track": true,
+    "max_people": 6,
+    "stale_frames": 45,
+    "device": null,
+    "frame_width": 640,
+    "crop": [
+      320,
+      0,
+      320,
+      240
+    ]
+  },
+  "videos": [
+    {
+      "video": "adl-01-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 150,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-02-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 180,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-03-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 180,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-04-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 150,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-05-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 180,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-06-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 230,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-07-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 180,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-08-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 180,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-09-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 150,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-10-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 300,
+      "first_fall_frame": 236,
+      "gt_fall_start": 200,
+      "delay_frames": 36
+    },
+    {
+      "video": "adl-11-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 300,
+      "first_fall_frame": 218,
+      "gt_fall_start": 200,
+      "delay_frames": 18
+    },
+    {
+      "video": "adl-12-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 250,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-13-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 265,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-14-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 235,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-15-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 275,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-16-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 240,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-17-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 230,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-18-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 265,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-19-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 250,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-20-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 270,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-21-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 280,
+      "first_fall_frame": null,
+      "gt_fall_start": 220,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-22-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 240,
+      "first_fall_frame": null,
+      "gt_fall_start": 169,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-23-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 220,
+      "first_fall_frame": null,
+      "gt_fall_start": 145,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-24-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 70,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-25-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 110,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-26-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 95,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-27-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 100,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-28-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 85,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-29-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 125,
+      "first_fall_frame": null,
+      "gt_fall_start": null,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-30-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 400,
+      "first_fall_frame": 267,
+      "gt_fall_start": 220,
+      "delay_frames": 47
+    },
+    {
+      "video": "adl-31-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 250,
+      "first_fall_frame": 130,
+      "gt_fall_start": 145,
+      "delay_frames": -15
+    },
+    {
+      "video": "adl-32-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 200,
+      "first_fall_frame": 171,
+      "gt_fall_start": 115,
+      "delay_frames": 56
+    },
+    {
+      "video": "adl-33-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 200,
+      "first_fall_frame": 166,
+      "gt_fall_start": 110,
+      "delay_frames": 56
+    },
+    {
+      "video": "adl-34-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 191,
+      "first_fall_frame": 117,
+      "gt_fall_start": 105,
+      "delay_frames": 12
+    },
+    {
+      "video": "adl-35-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 280,
+      "first_fall_frame": 88,
+      "gt_fall_start": 80,
+      "delay_frames": 8
+    },
+    {
+      "video": "adl-36-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 340,
+      "first_fall_frame": 263,
+      "gt_fall_start": 230,
+      "delay_frames": 33
+    },
+    {
+      "video": "adl-37-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 350,
+      "first_fall_frame": 289,
+      "gt_fall_start": 270,
+      "delay_frames": 19
+    },
+    {
+      "video": "adl-38-cam0.mp4",
+      "label": 0,
+      "pred": 1,
+      "view": null,
+      "frames": 345,
+      "first_fall_frame": 229,
+      "gt_fall_start": 205,
+      "delay_frames": 24
+    },
+    {
+      "video": "adl-39-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 270,
+      "first_fall_frame": null,
+      "gt_fall_start": 194,
+      "delay_frames": null
+    },
+    {
+      "video": "adl-40-cam0.mp4",
+      "label": 0,
+      "pred": 0,
+      "view": null,
+      "frames": 330,
+      "first_fall_frame": null,
+      "gt_fall_start": 260,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-01-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 160,
+      "first_fall_frame": 128,
+      "gt_fall_start": 113,
+      "delay_frames": 15
+    },
+    {
+      "video": "fall-02-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 110,
+      "first_fall_frame": 75,
+      "gt_fall_start": 70,
+      "delay_frames": 5
+    },
+    {
+      "video": "fall-03-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 215,
+      "first_fall_frame": 191,
+      "gt_fall_start": 178,
+      "delay_frames": 13
+    },
+    {
+      "video": "fall-04-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 96,
+      "first_fall_frame": 46,
+      "gt_fall_start": 44,
+      "delay_frames": 2
+    },
+    {
+      "video": "fall-05-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 151,
+      "first_fall_frame": 126,
+      "gt_fall_start": 109,
+      "delay_frames": 17
+    },
+    {
+      "video": "fall-06-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 100,
+      "first_fall_frame": 53,
+      "gt_fall_start": 41,
+      "delay_frames": 12
+    },
+    {
+      "video": "fall-07-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 156,
+      "first_fall_frame": 152,
+      "gt_fall_start": 115,
+      "delay_frames": 37
+    },
+    {
+      "video": "fall-08-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 91,
+      "first_fall_frame": 61,
+      "gt_fall_start": 60,
+      "delay_frames": 1
+    },
+    {
+      "video": "fall-09-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 185,
+      "first_fall_frame": 175,
+      "gt_fall_start": 151,
+      "delay_frames": 24
+    },
+    {
+      "video": "fall-10-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 130,
+      "first_fall_frame": 101,
+      "gt_fall_start": 70,
+      "delay_frames": 31
+    },
+    {
+      "video": "fall-11-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 130,
+      "first_fall_frame": 83,
+      "gt_fall_start": 79,
+      "delay_frames": 4
+    },
+    {
+      "video": "fall-12-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 110,
+      "first_fall_frame": 57,
+      "gt_fall_start": 55,
+      "delay_frames": 2
+    },
+    {
+      "video": "fall-13-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 85,
+      "first_fall_frame": 85,
+      "gt_fall_start": 74,
+      "delay_frames": 11
+    },
+    {
+      "video": "fall-14-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 61,
+      "first_fall_frame": 51,
+      "gt_fall_start": 46,
+      "delay_frames": 5
+    },
+    {
+      "video": "fall-15-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 71,
+      "first_fall_frame": 70,
+      "gt_fall_start": 58,
+      "delay_frames": 12
+    },
+    {
+      "video": "fall-16-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 55,
+      "first_fall_frame": 50,
+      "gt_fall_start": 47,
+      "delay_frames": 3
+    },
+    {
+      "video": "fall-17-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 95,
+      "first_fall_frame": null,
+      "gt_fall_start": 89,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-18-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 65,
+      "first_fall_frame": null,
+      "gt_fall_start": 46,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-19-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 100,
+      "first_fall_frame": null,
+      "gt_fall_start": 55,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-20-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 110,
+      "first_fall_frame": 82,
+      "gt_fall_start": 48,
+      "delay_frames": 34
+    },
+    {
+      "video": "fall-21-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 55,
+      "first_fall_frame": null,
+      "gt_fall_start": 51,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-22-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 56,
+      "first_fall_frame": 52,
+      "gt_fall_start": 34,
+      "delay_frames": 18
+    },
+    {
+      "video": "fall-23-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 75,
+      "first_fall_frame": null,
+      "gt_fall_start": 57,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-24-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 60,
+      "first_fall_frame": 58,
+      "gt_fall_start": 42,
+      "delay_frames": 16
+    },
+    {
+      "video": "fall-25-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 85,
+      "first_fall_frame": null,
+      "gt_fall_start": 75,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-26-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 61,
+      "first_fall_frame": null,
+      "gt_fall_start": 43,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-27-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 92,
+      "first_fall_frame": null,
+      "gt_fall_start": 81,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-28-cam0.mp4",
+      "label": 1,
+      "pred": 0,
+      "view": null,
+      "frames": 66,
+      "first_fall_frame": null,
+      "gt_fall_start": 57,
+      "delay_frames": null
+    },
+    {
+      "video": "fall-29-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 99,
+      "first_fall_frame": 93,
+      "gt_fall_start": 79,
+      "delay_frames": 14
+    },
+    {
+      "video": "fall-30-cam0.mp4",
+      "label": 1,
+      "pred": 1,
+      "view": null,
+      "frames": 70,
+      "first_fall_frame": 65,
+      "gt_fall_start": 55,
+      "delay_frames": 10
+    }
+  ],
+  "metrics": {
+    "n": 70,
+    "tp": 21,
+    "tn": 29,
+    "fp": 11,
+    "fn": 9,
+    "accuracy": 0.7142857142857143,
+    "precision": 0.65625,
+    "recall": 0.7,
+    "f1": 0.6774193548387096
+  },
+  "frame_metrics": {
+    "n": 9825,
+    "tp": 1221,
+    "tn": 7452,
+    "fp": 0,
+    "fn": 1152,
+    "accuracy": 0.8827480916030535,
+    "precision": 1.0,
+    "recall": 0.5145385587863464,
+    "f1": 0.679465776293823
+  },
+  "view_metrics": {},
+  "mean_delay_frames": 18.125,
+  "processing_fps": 10.21563930427165,
+  "frames_csv": "URFD_aspect_frames.csv"
+}

@@ -1,0 +1,11 @@
+ultralytics>=8.1
+# mp.solutions (legacy Pose API) is used -> keep mediapipe pinned
+mediapipe==0.10.14
+opencv-python
+# mediapipe 0.10.14 is built against numpy 1.x
+numpy<2
+# ByteTrack association (per-person tracking)
+lap
+matplotlib
+psutil
+requests
