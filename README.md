@@ -13,6 +13,10 @@ baseline (Sec. III-E, Table IV).
 θ = atan( |x_hip − x_shoulder| / (|y_hip − y_shoulder| + ε) )      θ ≥ 45° → fall
 ```
 
+## Results
+
+Latest evaluation tables and figures: [results/report.md](results/report.md).
+
 ## Project layout
 
 ```
